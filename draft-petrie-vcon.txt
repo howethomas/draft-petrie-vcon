@@ -4,8 +4,8 @@
 
 Network Working Group                                       D. G. Petrie
 Internet-Draft                                                 SIPez LLC
-Intended status: Standards Track                            23 July 2022
-Expires: 24 January 2023
+Intended status: Standards Track                           1 August 2022
+Expires: 2 February 2023
 
 
          The JSON format for vCon - Conversation Data Container
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 January 2023.
+   This Internet-Draft will expire on 2 February 2023.
 
 Copyright Notice
 
@@ -110,8 +110,9 @@ Table of Contents
        4.2.4.  name
        4.2.5.  validation
        4.2.6.  jCard???
-       4.2.7.  location???
-       4.2.8.  timezone???
+       4.2.7.  gmlpos
+       4.2.8.  civicaddress Object
+       4.2.9.  timezone???
      4.3.  Dialog Object
        4.3.1.  type
        4.3.2.  start
@@ -638,9 +639,33 @@ Table of Contents
 
 4.2.6.  jCard???
 
-4.2.7.  location???
+4.2.7.  gmlpos
 
-4.2.8.  timezone???
+   The gmlpos attribute contains the latitude and longitude of the
+   location of the party at the time of the conversation start.  This
+   attribute contains a value of the same format as the gml:pos element
+   defined in section 3.2 of the [PIDF-LO] PIDF.
+
+   *  gmlpos: "String" (optional)
+
+4.2.8.  civicaddress Object
+
+   The civicaddress object is optional and contains civic address
+   information about the location for the party.  It MAY contain any or
+   all of the following attributes: country, a1, a2, a3, a4, a5, a6,
+   prd, pod, sts, hno, hns, lmk, loc, flr, nam, pc as defined in section
+   2.2.1 of [GEOPRIV].  The values of all of these attributes are of
+   type String.  Note that the attribute names MUST be in lower case
+   when contained in the civicaddress object even though they are in
+   upper case in [GEOPRIV].
+
+   Do we need RFC6848 civic address extensions?
+
+   Is there a need for any temporal location?
+
+   Do we just specify fo rht e start of the conversation?
+
+4.2.9.  timezone???
 
 4.3.  Dialog Object
 
@@ -955,6 +980,10 @@ Table of Contents
 
 7.1.  Normative References
 
+   [GEOPRIV]  Peterson, J., "A Presence-based GEOPRIV Location Object
+              Format", RFC 4119, DOI 10.17487/RFC4119, December 2005,
+              <https://www.rfc-editor.org/rfc/rfc4119>.
+
    [HTTPS]    Rescorla, E., "HTTP Over TLS", RFC 2818,
               DOI 10.17487/RFC2818, May 2000,
               <https://www.rfc-editor.org/rfc/rfc2818>.
@@ -988,6 +1017,12 @@ Table of Contents
    [PASSporT] Wendt, C. and J. Peterson, "PASSporT: Personal Assertion
               Token", RFC 8225, DOI 10.17487/RFC8225, February 2018,
               <https://www.rfc-editor.org/rfc/rfc8225>.
+
+   [PIDF-LO]  Winterbottom, J., Thomson, M., and H. Tschofenig, "GEOPRIV
+              Presence Information Data Format Location Object (PIDF-LO)
+              Usage Clarification, Considerations, and Recommendations",
+              RFC 5491, DOI 10.17487/RFC5491, March 2009,
+              <https://www.rfc-editor.org/rfc/rfc5491>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
