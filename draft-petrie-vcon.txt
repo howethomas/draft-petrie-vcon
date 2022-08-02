@@ -4,8 +4,8 @@
 
 Network Working Group                                       D. G. Petrie
 Internet-Draft                                                 SIPez LLC
-Intended status: Standards Track                           1 August 2022
-Expires: 2 February 2023
+Intended status: Standards Track                           2 August 2022
+Expires: 3 February 2023
 
 
          The JSON format for vCon - Conversation Data Container
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 February 2023.
+   This Internet-Draft will expire on 3 February 2023.
 
 Copyright Notice
 
