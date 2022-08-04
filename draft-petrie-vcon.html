@@ -9,14 +9,14 @@
 <meta content="
        A vCon is the container for data and information relating to a conversation.  It is analogous to a   which contains address information for an individual.  A conversation may take the form of a traditional phone call, video conference, SMS or MMS message exchange, webchat or email thread.  The data in the container relating to the conversation may include Call Detail Records ( ), call meta data, participant identity information (e.g.  ), the actual conversational data exchanged (e.g. audio, video, text), realtime or post conversational analysis and attachements of files exchanged during the conversation.  Having a standardize container for all of the data related to a conversation is useful for many applications (see  ).  This document specifies the   format for a vCon and a method for signing vCons. 
     " name="description">
-<meta content="xml2rfc 3.13.0" name="generator">
+<meta content="xml2rfc 3.13.1" name="generator">
 <meta content="next generation" name="keyword">
 <meta content="unicorn" name="keyword">
 <meta content="sparkling distributed ledger" name="keyword">
 <meta content="draft-petrie-vcon-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.13.0
-    Python 3.10.4
+  xml2rfc 3.13.1
+    Python 3.10.5
     appdirs 1.4.4
     ConfigArgParse 1.5.3
     google-i18n-address 2.5.2
@@ -1037,7 +1037,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Petrie</td>
-<td class="center">Expires 3 February 2023</td>
+<td class="center">Expires 5 February 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1050,12 +1050,12 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-petrie-vcon-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-08-02" class="published">2 August 2022</time>
+<time datetime="2022-08-04" class="published">4 August 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-02-03">3 February 2023</time></dd>
+<dd class="expires"><time datetime="2023-02-05">5 February 2023</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1100,7 +1100,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 3 February 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 5 February 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1148,6 +1148,9 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
                     <p id="section-toc.1-1.1.2.1.2.4.1"><a href="#section-1.1.4" class="xref">1.1.4</a>.  <a href="#name-conversation-documents" class="xref">Conversation Documents</a></p>
 </li>
                 </ul>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.2">
+                <p id="section-toc.1-1.1.2.2.1"><a href="#section-1.2" class="xref">1.2</a>.  <a href="#name-use-cases-and-requirements" class="xref">Use Cases and Requirements</a></p>
 </li>
             </ul>
 </li>
@@ -1479,6 +1482,65 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 <p id="section-1.1.4-1">Documment discussed or exchanged during the conversation<a href="#section-1.1.4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
+</section>
+</div>
+<div id="use-cases-and-requirements">
+<section id="section-1.2">
+        <h3 id="name-use-cases-and-requirements">
+<a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-use-cases-and-requirements" class="section-name selfRef">Use Cases and Requirements</a>
+        </h3>
+<p id="section-1.2-1">Standardize container for conversational data exchange.
+It is not intended for real-time streaming of conversational data.
+It is for used of exchange of conversational data at either snapshots during or completed conversations and analysis after the completion.<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+<p id="section-1.2-2">Define a standard for exchange of conversational data in a sea of modes, platforms and service offerings for conversations.<a href="#section-1.2-2" class="pilcrow">¶</a></p>
+<p id="section-1.2-3">Example conversational modes:<a href="#section-1.2-3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.2-4.1">SMS<a href="#section-1.2-4.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.2">MMS<a href="#section-1.2-4.2" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.3">JABBER<a href="#section-1.2-4.3" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.4">SIMPLE<a href="#section-1.2-4.4" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.5">Proprietary web chat<a href="#section-1.2-4.5" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.6">SMTP<a href="#section-1.2-4.6" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.7">PSTN<a href="#section-1.2-4.7" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.8">SIP<a href="#section-1.2-4.8" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.9">WEBRTC<a href="#section-1.2-4.9" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-4.10">Priopietary video conferencing<a href="#section-1.2-4.10" class="pilcrow">¶</a>
+</li>
+        </ul>
+<p id="section-1.2-5">Do we need to list platforms and service offering?<a href="#section-1.2-5" class="pilcrow">¶</a></p>
+<p id="section-1.2-6">Ease integration of services and analysis of conversational data.  Lots off examples:<a href="#section-1.2-6" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.2-7.1">Export of conversation data from hosted service<a href="#section-1.2-7.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.2">Transcription<a href="#section-1.2-7.2" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.3">Translation<a href="#section-1.2-7.3" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.4">Sentiment Analysis<a href="#section-1.2-7.4" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.5">Product Evaluation Analysis<a href="#section-1.2-7.5" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.6">Import into ML and AI Analysis<a href="#section-1.2-7.6" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.7">Call Center Agent Evaluation and Coaching<a href="#section-1.2-7.7" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.8">Call Center DEVOPS (e.g. headset problems)<a href="#section-1.2-7.8" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-7.9">Call Center Service Level Agreement Evaluation<a href="#section-1.2-7.9" class="pilcrow">¶</a>
+</li>
+        </ul>
+<p id="section-1.2-8">Create standard format for conversations that can be used as a legal instrument such as verbal contract.
+This use case requires that a conversation be immutable.<a href="#section-1.2-8" class="pilcrow">¶</a></p>
+<p id="section-1.2-9">Better organize conversational data so that it can be handled in a consistant, safer means.<a href="#section-1.2-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
