@@ -1037,7 +1037,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Petrie</td>
-<td class="center">Expires 5 February 2023</td>
+<td class="center">Expires 6 February 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1050,12 +1050,12 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-petrie-vcon-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-08-04" class="published">4 August 2022</time>
+<time datetime="2022-08-05" class="published">5 August 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-02-05">5 February 2023</time></dd>
+<dd class="expires"><time datetime="2023-02-06">6 February 2023</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1100,7 +1100,7 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 5 February 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 6 February 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1538,9 +1538,20 @@ It is for used of exchange of conversational data at either snapshots during or 
           <li class="normal" id="section-1.2-7.9">Call Center Service Level Agreement Evaluation<a href="#section-1.2-7.9" class="pilcrow">¶</a>
 </li>
         </ul>
-<p id="section-1.2-8">Create standard format for conversations that can be used as a legal instrument such as verbal contract.
+<p id="section-1.2-8">Create standard format for conversations that can be used as a legal instrument such as verbal contract or for compliance records.
 This use case requires that a conversation be immutable.<a href="#section-1.2-8" class="pilcrow">¶</a></p>
 <p id="section-1.2-9">Better organize conversational data so that it can be handled in a consistant, safer means.<a href="#section-1.2-9" class="pilcrow">¶</a></p>
+<p id="section-1.2-10">Not in scope:<a href="#section-1.2-10" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.2-11.1">Streaming<a href="#section-1.2-11.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-11.2">Transport Mechanisms<a href="#section-1.2-11.2" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-11.3">Storage or Databases<a href="#section-1.2-11.3" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.2-11.4">Methods of Redaction of Text, Audio or Video Media<a href="#section-1.2-11.4" class="pilcrow">¶</a>
+</li>
+        </ul>
 </section>
 </div>
 </section>
@@ -1843,30 +1854,31 @@ This allows the non-PII portion of the vCon to still be analysed or used in a br
 The redacted object <span class="bcp14">SHOULD</span> contain the uuid parameter or alteratively <span class="bcp14">MAY</span> include the body and encoding parameters or alteratively the url, alg key, and signature parameters (see <span><a href="#inline-files" class="xref">Inline Files</a> (<a href="#inline-files" class="xref">Section 2.3</a>)</span> and <span><a href="#externally-referenced-files" class="xref">Externally Referenced Files</a> (<a href="#externally-referenced-files" class="xref">Section 2.4</a>)</span>).
 If the unredacted vCon is included in the body, the unredacted vCon <span class="bcp14">MUST</span> be in the encrypted form.
 If a reference to the unredacted vCon is provided in the url, the access to that URL <span class="bcp14">MUST</span> be restricted to only those who should be allowed to see the PII for the redacted vCon.<a href="#section-4.1.5-1" class="pilcrow">¶</a></p>
-<p id="section-4.1.5-2">TODO: Need to define method(s) for redaction??<a href="#section-4.1.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.1.5-2">TODO: Need to define method(s) for redaction?? No, redaction of text, audio and video can be done with existing post processing of media.  Method of redaction is out of scope of this document.  In scope: how to reference or handle redactions.<a href="#section-4.1.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.1.5-3">Do we need different levels of redaction?  If so, we need lables for the levels of redaction.<a href="#section-4.1.5-3" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1.5-3.1">
-              <p id="section-4.1.5-3.1.1">uuid: "String" (optional if inline or external reference provided)<a href="#section-4.1.5-3.1.1" class="pilcrow">¶</a></p>
-<p id="section-4.1.5-3.1.2">
-The value contains the <span><a href="#uuid" class="xref">uuid string value</a> (<a href="#uuid" class="xref">Section 4.1.2</a>)</span> of the unredacted/original vCon instance version.<a href="#section-4.1.5-3.1.2" class="pilcrow">¶</a></p>
+<li class="normal" id="section-4.1.5-4.1">
+              <p id="section-4.1.5-4.1.1">uuid: "String" (optional if inline or external reference provided)<a href="#section-4.1.5-4.1.1" class="pilcrow">¶</a></p>
+<p id="section-4.1.5-4.1.2">
+The value contains the <span><a href="#uuid" class="xref">uuid string value</a> (<a href="#uuid" class="xref">Section 4.1.2</a>)</span> of the unredacted/original vCon instance version.<a href="#section-4.1.5-4.1.2" class="pilcrow">¶</a></p>
 </li>
           </ul>
-<p id="section-4.1.5-4">or as defined in <span><a href="#inline-files" class="xref">Inline Files</a> (<a href="#inline-files" class="xref">Section 2.3</a>)</span> body and encoding <span class="bcp14">MAY</span> be included:<a href="#section-4.1.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.1.5-5">or as defined in <span><a href="#inline-files" class="xref">Inline Files</a> (<a href="#inline-files" class="xref">Section 2.3</a>)</span> body and encoding <span class="bcp14">MAY</span> be included:<a href="#section-4.1.5-5" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1.5-5.1">body: "String"<a href="#section-4.1.5-5.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.1.5-6.1">body: "String"<a href="#section-4.1.5-6.1" class="pilcrow">¶</a>
 </li>
-            <li class="normal" id="section-4.1.5-5.2">encoding: "String"<a href="#section-4.1.5-5.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.1.5-6.2">encoding: "String"<a href="#section-4.1.5-6.2" class="pilcrow">¶</a>
 </li>
           </ul>
-<p id="section-4.1.5-6">or as defined in <span><a href="#externally-referenced-files" class="xref">Externally Referenced Files</a> (<a href="#externally-referenced-files" class="xref">Section 2.4</a>)</span> url, alg, key and signature <span class="bcp14">MAY</span> be included:<a href="#section-4.1.5-6" class="pilcrow">¶</a></p>
+<p id="section-4.1.5-7">or as defined in <span><a href="#externally-referenced-files" class="xref">Externally Referenced Files</a> (<a href="#externally-referenced-files" class="xref">Section 2.4</a>)</span> url, alg, key and signature <span class="bcp14">MAY</span> be included:<a href="#section-4.1.5-7" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1.5-7.1">url: "String"<a href="#section-4.1.5-7.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.1.5-8.1">url: "String"<a href="#section-4.1.5-8.1" class="pilcrow">¶</a>
 </li>
-            <li class="normal" id="section-4.1.5-7.2">alg: "String"<a href="#section-4.1.5-7.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.1.5-8.2">alg: "String"<a href="#section-4.1.5-8.2" class="pilcrow">¶</a>
 </li>
-            <li class="normal" id="section-4.1.5-7.3">key: "String"<a href="#section-4.1.5-7.3" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.1.5-8.3">key: "String"<a href="#section-4.1.5-8.3" class="pilcrow">¶</a>
 </li>
-            <li class="normal" id="section-4.1.5-7.4">signature: "String"<a href="#section-4.1.5-7.4" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.1.5-8.4">signature: "String"<a href="#section-4.1.5-8.4" class="pilcrow">¶</a>
 </li>
           </ul>
 </section>
@@ -2400,14 +2412,54 @@ The value of the party parameter is the index into the parties array to the part
       <h2 id="name-security-considerations">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-5-1">PII can be redacted.
+<p id="section-5-1">The security concerts for vCons can put into two catigories: making the conversation immutable and protecting the privacy of the parties to the conversation and their PII.
+These requirements along with need to evolve a vCon (e.g. adding analysis, translations and transcriptions) conflict in some ways.
+To enable this, multiple verisons of a vCon may be created.
+Versions of a vCon may add information (e.g. analysis added to a prior vCon referenced by the appended Object) and versions that remove information (e.g. redactions of privacy information removed from the vCon referenced in the redacted Object).
+Different parts and versions of a vCon may be created in different security domains over a period of time.
+Typically a conversation of one mode, will be hosted or observed in a single domain.
+This will likely fall into one of the following hosting situations:<a href="#section-5-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5-2.1">Enterprise Hosted Communications<a href="#section-5-2.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-2.2">Software as a Service (SaaS) Hosted Communications<a href="#section-5-2.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-2.3">Service Provider Hosted Communications<a href="#section-5-2.3" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="section-5-3">The distinction among these has gotten clouded over recent years.
+The import consideration is that each is a different security domain.
+Informaiton about a conversation captured in an enterprise communications system (e.g. meta data and Dialog Object(s) recorded in an IP PBX) is a differenct security domain from a SaaS transcription service (i.e. an Analysis Object).
+When a vCon leaves a security domain, it <span class="bcp14">SHOULD</span> be signed to prevent it from being altered.
+If the new security domain needs to alter it, a new vCon is created with the removed or added data and the prior version is referenced (i.e. via the redacted or appended Object).
+If informaiton is redacted for privacy reasons, the vCon referenced in the redacted Object, <span class="bcp14">SHOULD</span> be encrypted to protect the privacy information in the unredacted version of the vCon.<a href="#section-5-3" class="pilcrow">¶</a></p>
+<p id="section-5-4">Using this approach, we can reduce the security operations on a vCon to signing and encryption.
+Two apporached to signing are needed as we have data that is contained withing the vCon and may have data not contained that is externally referenced.
+Externally referenced data <span class="bcp14">MUST</span> be signed using <span>[<a href="#LM-OTS" class="xref">LM-OTS</a>]</span> with the signature and URL of the externally referenced data included in the vCon.
+The vCon and its contents <span class="bcp14">MUST</span> use <span>[<a href="#JWS" class="xref">JWS</a>]</span> for signing.
+When a vCon requires encryption, it <span class="bcp14">MUST</span> use [JWE].<a href="#section-5-4" class="pilcrow">¶</a></p>
+<p id="section-5-5">Immutable or proof that conversation has been modified.<a href="#section-5-5" class="pilcrow">¶</a></p>
+<p id="section-5-6">Protection of Privacy<a href="#section-5-6" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-5-7.1">Portions redacted<a href="#section-5-7.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-7.2">De-????<a href="#section-5-7.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-5-7.3">Entire conversation data set encrypted<a href="#section-5-7.3" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="section-5-8">PII can be redacted.
 If PII in vCon data, it <span class="bcp14">SHOULD</span> be signed?? AND encrypted
-To be a conversation of record, vCon <span class="bcp14">MUST</span> be signed.
-Any time a vCon is shared outside its original security domain, it <span class="bcp14">SHOULD</span> be signed and optionally encrypted.
+To be a conversation of record, vCon <span class="bcp14">MUST</span> be signed.<a href="#section-5-8" class="pilcrow">¶</a></p>
+<p id="section-5-9">Methods of redaction exist for text, audio and video using post processing of the media.
+The method of redaction used is out of the scope of this document.
+A redacted vCon <span class="bcp14">MAY</span> reference it's non-redacted version.
+The non-redacted version of the vCon referenced from the redacted vCon <span class="bcp14">MUST</span> be encrypted such that only those with permision to view the non-redacted content can decrypt it.<a href="#section-5-9" class="pilcrow">¶</a></p>
+<p id="section-5-10">Any time a vCon is shared outside its original security domain, it <span class="bcp14">SHOULD</span> be signed and optionally encrypted.
 Files externally referenced by a vCon <span class="bcp14">SHOULD</span> always be signed with the verification information included in the vCon that references the external file as defined in [#externally-referenced-files] and [#signing-exteranlly-referenced-files].
 Externally referenced files <span class="bcp14">SHOULD</span> only be transported over <span>[<a href="#HTTPS" class="xref">HTTPS</a>]</span> and <span class="bcp14">SHOULD</span> be access controlled to those who are permitted to read the contents of that entire vCon.
-vCons transported over non-secure channels such as email <span class="bcp14">MUST</span> be in the encrypted form.<a href="#section-5-1" class="pilcrow">¶</a></p>
-<p id="section-5-2">Need to explain typical storage contexts which may be more secure and storage contexts which are less secure.<a href="#section-5-2" class="pilcrow">¶</a></p>
+vCons transported over non-secure channels such as email <span class="bcp14">MUST</span> be in the encrypted form.<a href="#section-5-10" class="pilcrow">¶</a></p>
+<p id="section-5-11">Need to explain typical storage contexts which may be more secure and storage contexts which are less secure.<a href="#section-5-11" class="pilcrow">¶</a></p>
 <div id="signing-externally-referenced-files">
 <section id="section-5.1">
         <h3 id="name-signing-externally-referenc">
